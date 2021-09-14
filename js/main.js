@@ -27,4 +27,11 @@ while (numsASumar !== 'ESC') {
     'Ingrese los números a sumar. \nPara ver el resultado escriba ESC'
   );
 }
-console.log(`El resultado es: ${numeros}.`);
+
+isNaN(numeros);
+
+if (isNaN(numeros)) {
+  console.log('Ingrese un valor válido.');
+} else {
+  console.log(`El resultado es: ${numeros}.`);
+}
