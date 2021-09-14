@@ -1,5 +1,5 @@
 let esPar = parseInt(prompt('Ingrese un numero a verificar:'));
-let cantSumar = prompt('¿Cuántos números desea sumar?');
+let cantSumar = prompt('¿Cuántos números desea sumar? \nMínimo 2, máximo 5.');
 let cantSumar2 = parseInt(cantSumar);
 let parImpar;
 let sumandos;
