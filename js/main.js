@@ -11,8 +11,10 @@ const verifPar = (num) => {
 
   if (parImpar == 0) {
     console.log('El número ' + esPar + ' es par.');
-  } else {
+  } else if (parImpar == 1) {
     console.log('El número ' + esPar + ' es impar.');
+  } else {
+    console.log('Ingrese un valor válido.');
   }
 };
 
