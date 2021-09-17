@@ -1,37 +1,31 @@
-let esPar = parseInt(prompt('Ingrese un numero a verificar:'));
-let numsASumar = prompt(
-  'Ingrese los números a sumar. \nPara ver el resultado escriba ESC'
-);
-let parImpar;
-let numeros = 0;
-let numsParseados;
+// Clase Persona con un constructor de objetos
+class Persona {
+  constructor(nombre, edad, sexo) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.sexo = sexo;
+  }
+}
 
-const verifPar = (num) => {
-  let parImpar = num % 2;
+// Array que va a contener a los objetos
+const personas = [];
 
-  if (parImpar == 0) {
-    console.log('El número ' + esPar + ' es par.');
-  } else if (parImpar == 1) {
-    console.log('El número ' + esPar + ' es impar.');
+// Objetos creados y pusheas al array "personas"
+personas.push(new Persona('Julio', 39, 'Masculino'));
+personas.push(new Persona('María', 25, 'Femenino'));
+personas.push(new Persona('Eve', 27, 'Femenino'));
+personas.push(new Persona('Darío', 33, 'Masculino'));
+
+// Función que compara los parametros edad
+const ordenar = (a, b) => {
+  if (a.edad < b.edad) {
+    return -1;
+  } else if (a.edad > b.edad) {
+    return 1;
   } else {
-    console.log('Ingrese un valor válido.');
+    return 0;
   }
 };
 
-verifPar(esPar);
-
-while (numsASumar !== 'ESC') {
-  numsParseados = parseInt(numsASumar);
-  numeros = numeros + numsParseados;
-  numsASumar = prompt(
-    'Ingrese los números a sumar. \nPara ver el resultado escriba ESC'
-  );
-}
-
-isNaN(numeros);
-
-if (isNaN(numeros)) {
-  console.log('Ingrese un valor válido.');
-} else {
-  console.log(`El resultado es: ${numeros}.`);
-}
+// El método sort() toma como parámetro la función "ordenar", ordenando a los objetos según el valor que la misma devuelve
+console.log(personas.sort(ordenar));
