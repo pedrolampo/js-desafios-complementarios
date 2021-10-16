@@ -5,19 +5,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Test</title>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div>
-            <button class="btn">Decir: Buenos días!</button>
-            <button class="btn">Decir: Buenas tardes!</button>
-            <button class="btn">Decir: Buenas noches!</button>
+        <div id="accordions">
+            <div id="accordionOne" class="accordions">
+                <h2 class="accordionHeader" id="headerOne">
+                    <div class="accordionButton">Accordion 1</div>
+                </h2>
+                <div class="accordionInside" id="contentOne">
+                    <div>
+                        <button id="btnOne">
+                            Cambiar el estilo de este botón
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionTwo" class="accordions">
+                <h2 class="accordionHeader" id="headerTwo">
+                    <div class="accordionButton">Accordion 2</div>
+                </h2>
+                <div class="accordionInside" id="contentTwo">
+                    <div>
+                        <button id="btnTwo">
+                            Cambiar el estilo de este botón
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <button class="btn">Lorem Ipsum 1</button>
-            <button class="btn">Lorem Ipsum 2</button>
-        </div>
-        <div id="textoAqui"></div>
 
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
         <script src="js/main.js"></script>
     </body>
 </html>
